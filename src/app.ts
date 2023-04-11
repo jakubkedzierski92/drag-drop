@@ -51,15 +51,36 @@ class ProjectInput {
     this.attach();
   }
 
-  private gatherUserInput(){
+  private gatherUserInput(): [string, string, number] | void {
+    const enteredTitle = this.titleInputElement.value
+    const enteredDescription = this.descriptionInputElement.value
+    const enteredPeople = this.peopleInputElement.value
 
+    if (enteredTitle.trim().length === 0 || 
+        enteredDescription.trim().length === 0 || 
+        enteredPeople.trim().length === 0) {
+            alert('Invalid input! Please provide correct data')
+            return;
+        } else {
+            return [enteredTitle, enteredDescription, +enteredPeople]
+        }
   }
-  
+
+  private clearInput() {
+    this.titleInputElement.value = '',
+    this.descriptionInputElement.value = '',
+    this.peopleInputElement.value = '';
+  }
+
   @autobind
   private submitHandler(event: Event) {
     event.preventDefault();
-    console.log(this.titleInputElement.value);
-    this.gatherUserInput()
+    const userInput = this.gatherUserInput()
+    if(Array.isArray(userInput)) {
+        const [title, desc, ppl] = userInput
+        console.log(title, desc, ppl)
+    }
+    this.clearInput()
   }
 
   private configure() {
