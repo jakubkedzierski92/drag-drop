@@ -57,11 +57,11 @@
   
   .projects {
     margin: 1rem;
-    border: 1px solid #ff0062;
+    border: 1px solid #050002;
   }
   
   .projects header {
-    background: #ff0062;
+    background: #045927;
     height: 3.5rem;
     display: flex;
     justify-content: center;
@@ -94,7 +94,7 @@
   }
   
   .projects li h2 {
-    color: #ff0062;
+    color: #000603;
     margin: 0.5rem 0;
   }
   
