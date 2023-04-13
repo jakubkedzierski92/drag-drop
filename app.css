@@ -33,13 +33,13 @@
   input:focus,
   textarea:focus {
     outline: none;
-    background: #fff5f9;
+    background: #ebeffa;
   }
   
   button {
     font: inherit;
-    background: #ff0062;
-    border: 1px solid #ff0062;
+    background: teal;
+    border: 1px solid white;
     cursor: pointer;
     color: white;
     padding: 0.75rem 1rem;
@@ -51,8 +51,8 @@
   
   button:hover,
   button:active {
-    background: #a80041;
-    border-color: #a80041;
+    background: hsl(180, 100%, 30%);
+    border-color: white;
   }
   
   .projects {
@@ -61,7 +61,7 @@
   }
   
   .projects header {
-    background: #045927;
+    background: #028036;
     height: 3.5rem;
     display: flex;
     justify-content: center;
@@ -91,6 +91,7 @@
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem;
     margin: 1rem;
+    background-color: white;
   }
   
   .projects li h2 {
@@ -99,7 +100,7 @@
   }
   
   #finished-projects li h2 {
-    color: #0044ff;
+    color: #000000;
   }
   
   .projects li h3 {
@@ -112,7 +113,7 @@
   }
   
   .droppable {
-    background: #ffe3ee;
+    background: #96ceb9;
   }
   
   #finished-projects .droppable {
@@ -122,6 +123,6 @@
   #user-input {
     margin: 1rem;
     padding: 1rem;
-    border: 1px solid #ff0062;
+    border: 1px solid teal;
     background: #f7f7f7;
   }
